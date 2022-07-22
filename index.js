@@ -3,7 +3,8 @@ const http = require('http');
 
 const server = http.createServer((request, response) => {
   return handler(request, response, {
-    symlinks: true
+    symlinks: true,
+    cleanUrls: false
   });
 });
 
