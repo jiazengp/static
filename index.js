@@ -4,7 +4,10 @@ const http = require('http');
 const server = http.createServer((request, response) => {
   return handler(request, response, {
     symlinks: true,
-    cleanUrls: false
+    cleanUrls: false,
+    unlisted: [
+        'node_modules'
+    ]
   });
 });
 
